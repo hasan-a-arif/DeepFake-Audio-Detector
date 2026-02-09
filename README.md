@@ -8,13 +8,6 @@ With the rise of deepfake technology, synthetic audio can now mimic the voices o
 
 Spoofed audio (also known as deepfake audio) refers to artificially generated speech designed to sound like a real person. It can be used to impersonate political leaders, influence voters, manipulate markets, or deceive authentication systems.
 
-## 🚀 Quick Demo
-
-Try listening to the samples:
-
-▶️ [Real Speech](assets/original_chunk_1.wav)  
-▶️ [Fake Speech](assets/fake_chunk_1.wav)
-
 ---
 
 ## Project Overview

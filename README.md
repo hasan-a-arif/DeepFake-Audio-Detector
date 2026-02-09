@@ -22,7 +22,7 @@ Below is a time–frequency comparison between authentic speech and AI-generated
 
 | Original (Real) | Spoofed (Deepfake) |
 |----------------|-------------------|
-| ![](assets/Original-audio.png) | ![](assets/Fake_audio.png) |
+| ![](assets/Original-audio.png) | ![](assets/Fake-audio.png) |
 
 ### Technical Observations
 

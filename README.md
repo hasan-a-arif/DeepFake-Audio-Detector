@@ -18,6 +18,24 @@ This system detects deepfake political speech using **spectrogram-based analysis
 
 ---
 
+## 🔊 Real vs Fake Audio Samples (Interactive Demo)
+
+Listen and compare the difference yourself.
+
+### ✅ Original Speech (Real)
+
+<audio controls>
+  <source src="assets/original_chunk_1.wav" type="audio/wav">
+</audio>
+
+### ❌ Spoofed Speech (Deepfake)
+
+<audio controls>
+  <source src="assets/fake_chunk_1.wav" type="audio/wav">
+</audio>
+
+---
+
 ## Dataset Preparation
 
 The dataset includes ~90 minutes of audio:

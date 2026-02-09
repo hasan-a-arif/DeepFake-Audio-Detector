@@ -8,6 +8,13 @@ With the rise of deepfake technology, synthetic audio can now mimic the voices o
 
 Spoofed audio (also known as deepfake audio) refers to artificially generated speech designed to sound like a real person. It can be used to impersonate political leaders, influence voters, manipulate markets, or deceive authentication systems.
 
+## 🚀 Quick Demo
+
+Try listening to the samples:
+
+▶️ [Real Speech](assets/original_chunk_1.wav)  
+▶️ [Fake Speech](assets/fake_chunk_1.wav)
+
 ---
 
 ## Project Overview
@@ -15,6 +22,8 @@ Spoofed audio (also known as deepfake audio) refers to artificially generated sp
 This system detects deepfake political speech using **spectrogram-based analysis** and a hybrid **CNN-LSTM model**. The model is trained to distinguish between:
 - ✅ Real speeches from President Joe Biden
 - ❌ Synthetic clones created using ElevenLabs API
+
+---
 
 ## 📈 Spectrogram Analysis: Real vs Spoofed Audio
 
@@ -40,8 +49,6 @@ These characteristics produce:
 - less periodic structure  
 
 This randomness reflects the **biomechanical nature of human vocal cords and airflow**.
-
----
 
 ### ❌ Spoofed Speech (Synthetic)
 Synthetic speech shows:
@@ -88,8 +95,6 @@ The dataset includes ~90 minutes of audio:
    - Validation: 20%
    - Testing: 10%
 
----
-
 ## Model Architecture
 
 We use a **CNN-LSTM hybrid** architecture:
@@ -116,8 +121,6 @@ We use a **CNN-LSTM hybrid** architecture:
 | F1-Score   | 0.9935    |
 
 Confusion matrix showed only 1 misclassified case out of 154 test samples.
-
----
 
 ## Generalization
 The trained model also performed consistently well on new unseen samples, indicating strong real-world applicability.

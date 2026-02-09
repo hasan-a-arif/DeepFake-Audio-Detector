@@ -16,23 +16,61 @@ This system detects deepfake political speech using **spectrogram-based analysis
 - ✅ Real speeches from President Joe Biden
 - ❌ Synthetic clones created using ElevenLabs API
 
+## 📈 Spectrogram Analysis: Real vs Spoofed Audio
+
+Below is a time–frequency comparison between authentic speech and AI-generated synthetic speech.
+
+| Original (Real) | Spoofed (Deepfake) |
+|----------------|-------------------|
+| ![](assets/Original-audio.png) | ![](assets/Fake_audio.png) |
+
+### Technical Observations
+
+### ✅ Real Speech (Authentic)
+Real human speech exhibits:
+
+- Natural micro-variations in pitch and formants  
+- Irregular harmonic energy distribution  
+- Background noise and breath artifacts  
+- Non-stationary frequency transitions  
+
+These characteristics produce:
+- diffuse textures  
+- uneven energy bands  
+- less periodic structure  
+
+This randomness reflects the **biomechanical nature of human vocal cords and airflow**.
+
 ---
 
-## 🔊 Real vs Fake Audio Samples (Interactive Demo)
+### ❌ Spoofed Speech (Synthetic)
+Synthetic speech shows:
 
-Listen and compare the difference yourself.
+- Over-smooth harmonic structures  
+- Repetitive vertical patterns  
+- More stationary frequency bands  
+- Reduced micro-noise and breath artifacts  
 
-### ✅ Original Speech (Real)
+These create:
+- sharper vertical streaks  
+- overly consistent spectral energy  
+- artificial regularity  
 
-<audio controls>
-  <source src="assets/original_chunk_1.wav" type="audio/wav">
-</audio>
+This occurs because neural TTS/vocoder models synthesize speech from **learned spectral templates**, not physical vocal mechanics.
 
-### ❌ Spoofed Speech (Deepfake)
+---
 
-<audio controls>
-  <source src="assets/fake_chunk_1.wav" type="audio/wav">
-</audio>
+### Why this matters for detection
+
+The CNN extracts spatial frequency patterns while the LSTM captures temporal dynamics.
+
+The model learns:
+
+- spectral smoothness differences
+- harmonic regularity
+- temporal consistency artifacts
+
+These subtle cues allow reliable separation between real and spoofed audio, leading to high detection accuracy.
 
 ---
 
